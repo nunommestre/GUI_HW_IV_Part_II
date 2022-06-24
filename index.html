@@ -1,0 +1,76 @@
+<!--
+File: index.html
+GUI Assignment: Adding Sliders and Tabs (HW4-Pt2)
+Nuno Mestre, UMass Lowell Computer Science, nuno_mestre@student.uml.edu
+June 23, 2022
+Description: Updated the HTML to include the slider and tabs div's.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Multiplication Table</title>
+    <meta charset="utf-8" />
+    <!-- Stylesheets -->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <h1>AMONG US MATHEMATICS</h1>
+    <div class="form">
+      <!-- Simple form requesting 4 numbers -->
+      <form
+        id="input_form"
+        method="get"
+        action=""
+        onsubmit="return submitForm();"
+      >
+        <h1>Enter your values:</h1>
+        <p>Lowest x value</p>
+        <!-- Identified in the validation form by the name attributes value -->
+        <input type="text" id="x1" name="x1" placeholder="Number" />
+        <p>Greatest x value</p>
+        <input type="text" id="x2" name="x2" placeholder="Number" />
+        <div id="slider-x"></div>
+        <p>Lowest y value</p>
+        <input type="text" id="y1" name="y1" placeholder="Number" />
+        <p>Greatest y value</p>
+        <input type="text" id="y2" name="y2" placeholder="Number" />
+        <div id="slider-y"></div>
+      </form>
+      <!-- Save and Delete Table buttons -->
+      <button id="create" type="submit" name="submit" class="btn">
+        Save Table!
+      </button>
+      <p>(Check off multiple tables to delete more than one!)</p>
+      <button id="delete" type="submit" name="submit" class="btn">
+        Delete!
+      </button>
+    </div>
+    <!-- Where the table is set to be -->
+    <div class="table_div">
+      <table id="m_table"></table>
+    </div>
+    <!-- Tabs section -->
+    <!-- This creates space where the tabs will be generated -->
+    <div id="tab_section">
+      <div id="tabs">
+        <ul></ul>
+      </div>
+    </div>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/index.js"></script>
+  </body>
+</html>

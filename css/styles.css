@@ -1,0 +1,128 @@
+/* File: styles.css
+ GUI Assignment: Adding Sliders and Tabs (HW4-Pt2)
+ Nuno Mestre, UMass Lowell Computer Science, nuno_mestre@student.uml.edu
+ June 23, 2022
+ Description: CSS Styling for the page. */
+
+/* Deals with the background and header text */
+body {
+  background: url(../Images/Among_Us.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+/* Styles the left hand page of the website asking for the inputs */
+.form {
+  margin: 0 auto;
+  display: inline;
+  float: left;
+
+  background: url(../Images/Form.jpg) no-repeat center center;
+  background-size: cover;
+  padding: 30px 100px;
+  margin-left: 75px;
+  margin-top: 75px;
+}
+#input_form {
+  font-weight: bold;
+  color: white;
+}
+input {
+  display: block;
+}
+p {
+  color: white;
+}
+/* Color and styling for the sliders and their value sliders */
+#slider-x,
+#slider-y {
+  margin-top: 20px;
+  border-color: rgb(218, 121, 121);
+  border-width: 3px;
+}
+#slider-x .ui-slider-handle {
+  background: white;
+  border-color: rgb(243, 111, 111);
+  border-width: 3px;
+  text-align: center;
+  color: rgb(218, 121, 121);
+}
+#slider-y .ui-slider-handle {
+  background: white;
+  border-color: rgb(243, 111, 111);
+  border-width: 3px;
+  text-align: center;
+  color: rgb(218, 121, 121);
+}
+/* Jquery Validation messages styling */
+label.error {
+  color: red;
+  background-color: antiquewhite;
+  font-size: 15px;
+  margin: 5px;
+}
+/* Button styling within the form */
+button img {
+  height: 100px;
+  width: 100px;
+}
+button img:hover {
+  height: 125px;
+  width: 125px;
+}
+
+/* Table styling for different rows and columns as well as spacing for the table on the page*/
+.table_div {
+  padding: 30px 100px;
+  margin-left: 75px;
+  margin-top: 75px;
+  height: 650px;
+  overflow: auto;
+}
+#m_table {
+  margin: 0 auto;
+}
+td {
+  font-family: monospace;
+  text-align: center;
+  font-size: 20px;
+  margin: 0;
+  width: 20px;
+}
+tr:nth-child(even) {
+  background-color: rgb(78, 153, 68);
+  color: white;
+}
+tr:nth-child(odd) {
+  background-color: white;
+  color: rgb(78, 153, 68);
+}
+/* Added overflow and top:0 left:0 to have fixed borders (sticky toggles between fixed and relative) */
+tr:nth-child(1) {
+  background-color: brown;
+  color: white;
+  top: 0;
+  position: sticky;
+}
+td:nth-child(1) {
+  background-color: brown;
+  color: white;
+  left: 0;
+  position: sticky;
+}
+/* Basic color changes for the tab section */
+#tabs > ul {
+  background-color: brown;
+}
+#tabs > ul > li.tab-class.ui-state-default {
+  background-color: rgb(78, 153, 68);
+  color: antiquewhite;
+}
+#tabs {
+  background-color: antiquewhite;
+  visibility: hidden;
+}
